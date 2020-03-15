@@ -6,20 +6,24 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
     <title>Singolo</title>
 </head>
 
 <body>
-    <header>
+
+
+    <div id="_header"></div>
+    <header >
         <div class="container">
-            <div class="header-inner">
+            <div  class="header-inner">
                 <h1><a href="#" class="header-logo">SINGOLO</a></h1>
                 <div class="nav-header">
-                    <a class="nav-header-link red-color" href="# ">Home</a><span>·</span>
-                    <a class="nav-header-link" href="#">Services</a><span>·</span>
-                    <a class="nav-header-link" href="#">Portfolio</a><span>·</span>
-                    <a class="nav-header-link" href="#">About</a><span>·</span>
-                    <a class="nav-header-link" href="#">Contact</a>
+                    <a class="nav-header-link" href="#_header">Home</a><span>·</span>
+                    <a class="nav-header-link" href="#_services">Services</a><span>·</span>
+                    <a class="nav-header-link" href="#_portfolio">Portfolio</a><span>·</span>
+                    <a class="nav-header-link" href="#_about-us">About</a><span>·</span>
+                    <a class="nav-header-link" href="#_get-a-quote">Contact</a>
                 </div>
             </div>
         </div>
@@ -41,7 +45,7 @@
         </div>
     </div>
 
-    <div class="services">
+    <div id="_services" class="services">
         <div class="container">
             <div class="services-inner">
                 <div class="main-info-servises">
@@ -101,7 +105,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio">
+    <div id="_portfolio" class="portfolio">
         <div class="container">
             <div class="portfolio-inner">
                 <h2>Portfolio</h2>
@@ -134,7 +138,7 @@
             </div>
         </div>
     </div>
-    <div class="about-us">
+    <div id="_about-us" class="about-us">
         <div class="container">
             <div class="about-us-inner">
                 <h2>About Us</h2>
@@ -174,7 +178,7 @@
             </div>
         </div>
     </div>
-    <div class="get-a-quote">
+    <div id="_get-a-quote" class="get-a-quote">
         <div class="container">
             <div class="get-a-quote-inner">
                 <h2>Get a Quote</h2>

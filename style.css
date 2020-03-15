@@ -11,6 +11,10 @@
 	font-style: normal;
 }
 
+.btn {
+	font-size: 14px;
+ }
+
 html{
 	font-size: 10px; 
 }
@@ -46,7 +50,10 @@ header{
 	width: 100%;
 	background-color: #2d303a;
 	border-bottom: solid 6px #323746;
-	margin: auto;	
+	margin: auto;
+	position: sticky;
+	top: 0px;
+			
 }
 
 .header-logo{
@@ -81,6 +88,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
+	
 }
 
 /*Nav*/
@@ -113,7 +121,7 @@ header{
 
 .slider {
 	background-color: #f06c64;
-	border-bottom: solid 6px #ea676b;	
+	border-bottom: solid 6px #ea676b;
 }
 
 .slider-inner{
@@ -160,12 +168,13 @@ header{
 	width: 100%;
 	background-color: #f2f2f2;
 	border-bottom: solid 6px #ffffff ;
+	
+	
 }
 
 .services-inner {
 	height: 494px;
     width: 100%;
-
 	margin: 0 auto;
 }
 
@@ -190,6 +199,7 @@ header{
 	font-weight: 300;
 	line-height: 1.7;
 	color: #767e9e;
+	text-align: justify;
 }
 
 .services-flexbox-menu{
@@ -200,10 +210,11 @@ header{
 }
 
 .services-content{
-	padding-left: 10px;
-	height: 125px;
-	width: 320px;
-	overflow:hidden;
+    padding-left: 10px;
+    height: 95px;
+    width: 320px;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .services-content img{
