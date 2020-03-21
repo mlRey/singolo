@@ -24,12 +24,18 @@ body{
 *:before,
 *:after {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, span{
 	margin: 0;
     padding: 0;
     line-height: 1;
+}
+
+.anhor{
+	position: relative;
+	top: -70px;
 }
 
 /*Container*/
@@ -47,6 +53,9 @@ header{
 	background-color: #2d303a;
 	border-bottom: solid 6px #323746;
 	margin: auto;	
+	position: sticky;
+	top: 0px;
+	z-index: 3;
 }
 
 .header-logo{
@@ -66,9 +75,8 @@ header{
     color: #f06c64;
 }
 
-.red-color{
+a.active-link{
 	color: #f06c64;
-	margin: 0;
 }
 
 .header-inner{
@@ -132,6 +140,7 @@ header{
 	height: 589px;
 	transition: color .2s linear;
 	opacity: 0.5;
+	z-index: 2;
 }
 
 .slider-arrow:hover{
@@ -147,7 +156,21 @@ header{
 	padding-bottom: 5px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;	
+	visibility: visible;
+	z-index: 1;
+}
+
+.slider2-phone{
+	width: 796px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
+	
 }
 
 .padding-to-perf{
@@ -290,7 +313,7 @@ portfolio-nav{
 .nav-link.active{
         color: #c5c5c5;
         border: 1px solid #c5c5c5;
-        margin-right: 7px;
+        margin-right: 8px;
 }
 
 .nav-link:hover{
@@ -300,16 +323,21 @@ portfolio-nav{
 
 .portfolio-img-box{
 	padding-top: 19px;
-	height: 621px;
+	width: 940px;
+	height: 620px;	
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
+    align-content: space-between;
 	overflow: hidden;
+	border: 0 !important;
 }
 
-.portfolio-img{
-    display: inline;
-    margin: 0 20px 20px 0; 
+
+.selected-img{
+	border: 5px solid #F06C64;
+	border-radius: 10px;
+	
 }
 
 /* about us */
@@ -344,11 +372,12 @@ portfolio-nav{
 	text-align: justify;	
 }
 
-.about-us ul{
+.about-us-pbloc{
 	padding: 44px 0 0 0;
+	display: flex;
 }
 
-.about-us ul li{
+.about-us-pbloc-inner{
 	width: 300px;
 	float: left;
 	display: inline;
@@ -356,7 +385,7 @@ portfolio-nav{
         
 }
 
-.about-us ul li:first-child {
+.about-us-pbloc-inner:first-child {
 	margin-left: 0;
 	letter-spacing: -0.1px;
 }
@@ -371,7 +400,7 @@ portfolio-nav{
     overflow: hidden;    
 }
 
-.about-us ul li p{
+.about-us-pbloc-inner p{
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.8;
@@ -380,7 +409,7 @@ portfolio-nav{
 	margin: 11px 0 0 0;
 }
 
-.about-us ul li a {
+.about-us-pbloc-inner a {
 	display: block;
 }
 

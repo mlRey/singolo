@@ -10,16 +10,17 @@
 </head>
 
 <body>
+    <a id="_header" class="anhor"></a>
     <header>
-        <div class="container">
+            <div class="container">
             <div class="header-inner">
                 <h1><a href="#" class="header-logo">SINGOLO</a></h1>
-                <div class="nav-header">
-                    <a class="nav-header-link red-color" href="# ">Home</a><span>·</span>
-                    <a class="nav-header-link" href="#">Services</a><span>·</span>
-                    <a class="nav-header-link" href="#">Portfolio</a><span>·</span>
-                    <a class="nav-header-link" href="#">About</a><span>·</span>
-                    <a class="nav-header-link" href="#">Contact</a>
+                <div id="navlink"class="nav-header">
+                    <a class="nav-header-link active-link" href="#_header">Home</a><span>·</span>
+                    <a class="nav-header-link" href="#_services">Services</a><span>·</span>
+                    <a class="nav-header-link" href="#_portfolio">Portfolio</a><span>·</span>
+                    <a class="nav-header-link" href="#_about-us">About</a><span>·</span>
+                    <a class="nav-header-link" href="#_get-a-qoute">Contact</a>
                 </div>
             </div>
         </div>
@@ -29,10 +30,14 @@
             <div class="slider-inner">
                 <div class="slider-arrow">
                     <img src="./assets/images/arrow.svg" alt="" href="# ">
+                </div id="slider-phone">
+                <div class="slider-phone" >
+                        <div><img src="./assets/images/iphone-vertical.png" alt="">
+                            </div>
+                        <img src="./assets/images/iphone-horizontal.png" alt="" class="padding-to-perf">
                 </div>
-                <div class="slider-phone">
-                    <img src="./assets/images/iphone-vertical.png" alt="">
-                    <img src="./assets/images/iphone-horizontal.png" alt="" class="padding-to-perf">
+                <div class="slider2-phone">
+                    <img src="./assets/images/Slider2.png" alt="">
                 </div>
                 <div class="slider-arrow right">
                     <img src="./assets/images/arrow.svg" alt="" href="# " transform="rotate(180deg)">
@@ -40,7 +45,7 @@
             </div>
         </div>
     </div>
-
+    <a id="_services" class="anhor"></a>
     <div class="services">
         <div class="container">
             <div class="services-inner">
@@ -101,39 +106,36 @@
             </div>
         </div>
     </div>
+    <a id="_portfolio" class="anhor"></a>
     <div class="portfolio">
         <div class="container">
             <div class="portfolio-inner">
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <portfolio-nav>
-                    <a class="nav-link active" href="# ">All</a>
-                    <a class="nav-link" href="#">Web Design</a>
-                    <a class="nav-link" href="#">Graphic Design</a>
-                    <a class="nav-link" href="#">Artwork</a>
+                <portfolio-nav id="portfolio-nav">
+                    <a class="nav-link active" href="#_portfolio" onclick="mixPortfolio()">All</a>
+                    <a class="nav-link" href="#_portfolio" onclick="mixPortfolio()">Web Design</a>
+                    <a class="nav-link" href="#_portfolio" onclick="mixPortfolio()">Graphic Design</a>
+                    <a class="nav-link" href="#_portfolio" onclick="mixPortfolio()">Artwork</a>
                 </portfolio-nav>
-                <div class="portfolio-img-box">
-                    <img class="portfolio-img" src="./assets/images/thumb/img1.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img2.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img3.jpg" width="220" height="187" alt="#">
+                <div id="mixeimg" class="portfolio-img-box">
+                    <img src="./assets/images/thumb/img1.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img2.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img3.jpg" width="220" height="187" alt="#">
                     <img src="./assets/images/thumb/img4.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img5.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img6.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img7.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img5.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img6.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img7.jpg" width="220" height="187" alt="#">
                     <img src="./assets/images/thumb/img8.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img9.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img10.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img11.jpg" width="220" height="187" alt="#">
-                    <img src="./assets/images/thumb/img12.jpg" width="220" height="187" alt="#">
-                    <!-- добавляем больше 12 картинок -->
-                    <img class="portfolio-img" src="./assets/images/thumb/img9.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img10.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img11.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img9.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img10.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img11.jpg" width="220" height="187" alt="#">
                     <img src="./assets/images/thumb/img12.jpg" width="220" height="187" alt="#">
                 </div>
             </div>
         </div>
     </div>
+    <a id="_about-us" class="anhor"></a>
     <div class="about-us">
         <div class="container">
             <div class="about-us-inner">
@@ -142,8 +144,8 @@
                     nisi erat porttitor ligula,
                     eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
                     nibh.</h3>
-                <ul>
-                    <li><img src="./assets/images/profile1.jpg" width="300" height="300" alt="#" />
+                <div class="about-us-pbloc">
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile1.jpg" width="300" height="300" alt="#" />
                         <h4>Adam Jensen</h4>
                         <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor
                             id lorem.</p>
@@ -151,8 +153,8 @@
                         <a href="#"><span class="icon-gplus"></span></a>
                         <a href="#"><span class="icon-twitter"></span></a>
                         <a href="#"><span class="icon-linkedin"></span></a></span></a>
-                    </li>
-                    <li><img src="./assets/images/profile2.jpg" width="300" height="300" alt="#" />
+                    </div>
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile2.jpg" width="300" height="300" alt="#" />
                         <h4>Desmond Miles</h4>
                         <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
                             ultrices velit.</p>
@@ -160,8 +162,8 @@
                         <a href="#"><span class="icon-gplus"></span></a>
                         <a href="#"><span class="icon-twitter"></span></a>
                         <a href="#"><span class="icon-linkedin"></span></a></span></a>
-                    </li>
-                    <li><img src="./assets/images/profile3.jpg" width="300" height="300" alt="#" />
+                    </div>
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile3.jpg" width="300" height="300" alt="#" />
                         <h4>Scolara Visari</h4>
                         <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
                             Quisque condimentum.</p>
@@ -169,11 +171,12 @@
                         <a href="#"><span class="icon-gplus"></span></a>
                         <a href="#"><span class="icon-twitter"></span></a>
                         <a href="#"><span class="icon-linkedin"></span></a></span></a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <a id="_get-a-qoute" class="anhor"></a>
     <div class="get-a-quote">
         <div class="container">
             <div class="get-a-quote-inner">
@@ -222,6 +225,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
