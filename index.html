@@ -9,38 +9,57 @@
     <title>Singolo</title>
 </head>
 
-<body>
+<body id="body">
+    <a id="_header" class="anhor"></a>
     <header>
         <div class="container">
             <div class="header-inner">
                 <h1><a href="#" class="header-logo">SINGOLO</a></h1>
-                <div class="nav-header">
-                    <a class="nav-header-link red-color" href="# ">Home</a><span>·</span>
-                    <a class="nav-header-link" href="#">Services</a><span>·</span>
-                    <a class="nav-header-link" href="#">Portfolio</a><span>·</span>
-                    <a class="nav-header-link" href="#">About</a><span>·</span>
-                    <a class="nav-header-link" href="#">Contact</a>
+                <div id="navlink" class="nav-header">
+                    <a class="nav-header-link active-link" href="#_header">Home</a><span>·</span>
+                    <a class="nav-header-link" href="#_services">Services</a><span>·</span>
+                    <a class="nav-header-link" href="#_portfolio">Portfolio</a><span>·</span>
+                    <a class="nav-header-link" href="#_about-us">About</a><span>·</span>
+                    <a class="nav-header-link" href="#_get-a-qoute">Contact</a>
                 </div>
             </div>
         </div>
     </header>
     <div class="slider">
         <div class="container">
-            <div class="slider-inner">
-                <div class="slider-arrow">
-                    <img src="./assets/images/arrow.svg" alt="" href="# ">
+            <div id="slider-cont">
+                <div class="slider-inner">
+                    <div class="item active_sli">
+                        <div class="discription">
+                            <div class="phone-content ">
+                                <img src="./assets/images/Slide-1.png" alt="">
+                                <div id="scrine1"></div>
+                                <div id="scrine2"></div>
+                                <button class="btn" onclick="btn1_click()"></button>
+                                <button class="btn2" onclick="btn2_click()"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="discription">
+                            <div class="phone-content ">
+                                <img src="./assets/images/Slider2.png" alt="">
+                                <div id="scrine3" ></div>
+                                <button class="btn3" onclick="btn3_click()"></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="slider-phone">
-                    <img src="./assets/images/iphone-vertical.png" alt="">
-                    <img src="./assets/images/iphone-horizontal.png" alt="" class="padding-to-perf">
+                <div class="control left">
+                    <div class="arrow left">&#10094</div>
                 </div>
-                <div class="slider-arrow right">
-                    <img src="./assets/images/arrow.svg" alt="" href="# " transform="rotate(180deg)">
+                <div class="control right">
+                    <div class="arrow right">&#10095</div>
                 </div>
             </div>
         </div>
     </div>
-
+    <a id="_services" class="anhor"></a>
     <div class="services">
         <div class="container">
             <div class="services-inner">
@@ -101,39 +120,36 @@
             </div>
         </div>
     </div>
+    <a id="_portfolio" class="anhor"></a>
     <div class="portfolio">
         <div class="container">
             <div class="portfolio-inner">
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <portfolio-nav>
-                    <a class="nav-link active" href="# ">All</a>
-                    <a class="nav-link" href="#">Web Design</a>
-                    <a class="nav-link" href="#">Graphic Design</a>
-                    <a class="nav-link" href="#">Artwork</a>
+                <portfolio-nav id="portfolio-nav">
+                    <a class="nav-link active" href="#_portfolio" onclick="mixPortfolio()">All</a>
+                    <a class="nav-link" href="#_portfolio" onclick="mixPortfolio()">Web Design</a>
+                    <a class="nav-link" href="#_portfolio" onclick="mixPortfolio()">Graphic Design</a>
+                    <a class="nav-link" href="#_portfolio" onclick="mixPortfolio()">Artwork</a>
                 </portfolio-nav>
-                <div class="portfolio-img-box">
-                    <img class="portfolio-img" src="./assets/images/thumb/img1.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img2.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img3.jpg" width="220" height="187" alt="#">
+                <div id="mixeimg" class="portfolio-img-box">
+                    <img src="./assets/images/thumb/img1.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img2.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img3.jpg" width="220" height="187" alt="#">
                     <img src="./assets/images/thumb/img4.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img5.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img6.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img7.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img5.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img6.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img7.jpg" width="220" height="187" alt="#">
                     <img src="./assets/images/thumb/img8.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img9.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img10.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img11.jpg" width="220" height="187" alt="#">
-                    <img src="./assets/images/thumb/img12.jpg" width="220" height="187" alt="#">
-                    <!-- добавляем больше 12 картинок -->
-                    <img class="portfolio-img" src="./assets/images/thumb/img9.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img10.jpg" width="220" height="187" alt="#">
-                    <img class="portfolio-img" src="./assets/images/thumb/img11.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img9.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img10.jpg" width="220" height="187" alt="#">
+                    <img src="./assets/images/thumb/img11.jpg" width="220" height="187" alt="#">
                     <img src="./assets/images/thumb/img12.jpg" width="220" height="187" alt="#">
                 </div>
             </div>
         </div>
     </div>
+    <a id="_about-us" class="anhor"></a>
     <div class="about-us">
         <div class="container">
             <div class="about-us-inner">
@@ -142,8 +158,9 @@
                     nisi erat porttitor ligula,
                     eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
                     nibh.</h3>
-                <ul>
-                    <li><img src="./assets/images/profile1.jpg" width="300" height="300" alt="#" />
+                <div class="about-us-pbloc">
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile1.jpg" width="300" height="300"
+                            alt="#" />
                         <h4>Adam Jensen</h4>
                         <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor
                             id lorem.</p>
@@ -151,8 +168,9 @@
                         <a href="#"><span class="icon-gplus"></span></a>
                         <a href="#"><span class="icon-twitter"></span></a>
                         <a href="#"><span class="icon-linkedin"></span></a></span></a>
-                    </li>
-                    <li><img src="./assets/images/profile2.jpg" width="300" height="300" alt="#" />
+                    </div>
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile2.jpg" width="300" height="300"
+                            alt="#" />
                         <h4>Desmond Miles</h4>
                         <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
                             ultrices velit.</p>
@@ -160,8 +178,9 @@
                         <a href="#"><span class="icon-gplus"></span></a>
                         <a href="#"><span class="icon-twitter"></span></a>
                         <a href="#"><span class="icon-linkedin"></span></a></span></a>
-                    </li>
-                    <li><img src="./assets/images/profile3.jpg" width="300" height="300" alt="#" />
+                    </div>
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile3.jpg" width="300" height="300"
+                            alt="#" />
                         <h4>Scolara Visari</h4>
                         <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
                             Quisque condimentum.</p>
@@ -169,11 +188,12 @@
                         <a href="#"><span class="icon-gplus"></span></a>
                         <a href="#"><span class="icon-twitter"></span></a>
                         <a href="#"><span class="icon-linkedin"></span></a></span></a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <a id="_get-a-qoute" class="anhor"></a>
     <div class="get-a-quote">
         <div class="container">
             <div class="get-a-quote-inner">
@@ -184,13 +204,15 @@
                 </h3>
                 <ul>
                     <li>
-                        <form name="get-a-quote-form" method="GET">
-                            <input name="Name" class type="text" placeholder="Name (Required)" required>
-                            <input name="Email" class type="email" placeholder="Email (Required)" required>
-                            <input name="Subject" class type="text" placeholder="Subject" required>
-                            <textarea name="text-detail" placeholder="Describe your project in detail..."></textarea>
+                        <form id="get-a-quote-form"  onsubmit="showMessagemModal()" >
+                            <input id="Name" maxlength="100" class type="text" placeholder="Name (Required)" required>
+                            <input id="Email" class type="email" placeholder="Email (Required)" required>
+                            <input id="Subject" maxlength="120" class type="text" placeholder="Subject" required>
+                            <textarea id="text-detail" maxlength="255" placeholder="Describe your project in detail..."></textarea>
                             <input type="submit" value="submit" class="subbtn">
+                        </form>
                     </li>
+                    
                     <li>
                         <h4>Contact Information</h4>
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae,
@@ -204,6 +226,15 @@
                         <div class="get-a-quote-contact"><img src="./assets/images/mail.svg" alt="mail" width="13"
                                 height="11"> <a href="mailto:info@singolo.com"> info@singolo.com </a> </div>
                     </li>
+            </div>
+            <div id="resultWindow" class="hidden">
+                <div id="message">
+                    <p><span class="message-title">Письмо отправлено</span></p>
+                    <p><span id="nameValue"></span></p>
+                    <p><span id="subjectValue"></span></p>
+                    <p><span id="describeValue"></span></p>
+                    <input id="okButton" class="message-button" type="button" value="OK"></input>
+                </div>
             </div>
         </div>
     </div>
@@ -222,6 +253,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
