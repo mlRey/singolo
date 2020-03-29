@@ -9,13 +9,13 @@
     <title>Singolo</title>
 </head>
 
-<body>
+<body id="body">
     <a id="_header" class="anhor"></a>
     <header>
-            <div class="container">
+        <div class="container">
             <div class="header-inner">
                 <h1><a href="#" class="header-logo">SINGOLO</a></h1>
-                <div id="navlink"class="nav-header">
+                <div id="navlink" class="nav-header">
                     <a class="nav-header-link active-link" href="#_header">Home</a><span>·</span>
                     <a class="nav-header-link" href="#_services">Services</a><span>·</span>
                     <a class="nav-header-link" href="#_portfolio">Portfolio</a><span>·</span>
@@ -27,20 +27,34 @@
     </header>
     <div class="slider">
         <div class="container">
-            <div class="slider-inner">
-                <div class="slider-arrow">
-                    <img src="./assets/images/arrow.svg" alt="" href="# ">
-                </div id="slider-phone">
-                <div class="slider-phone" >
-                        <div><img src="./assets/images/iphone-vertical.png" alt="">
+            <div id="slider-cont">
+                <div class="slider-inner">
+                    <div class="item active_sli">
+                        <div class="discription">
+                            <div class="phone-content ">
+                                <img src="./assets/images/Slide-1.png" alt="">
+                                <div id="scrine1"></div>
+                                <div id="scrine2"></div>
+                                <button class="btn" onclick="btn1_click()"></button>
+                                <button class="btn2" onclick="btn2_click()"></button>
                             </div>
-                        <img src="./assets/images/iphone-horizontal.png" alt="" class="padding-to-perf">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="discription">
+                            <div class="phone-content ">
+                                <img src="./assets/images/Slider2.png" alt="">
+                                <div id="scrine3" ></div>
+                                <button class="btn3" onclick="btn3_click()"></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="slider2-phone">
-                    <img src="./assets/images/Slider2.png" alt="">
+                <div class="control left">
+                    <div class="arrow left">&#10094</div>
                 </div>
-                <div class="slider-arrow right">
-                    <img src="./assets/images/arrow.svg" alt="" href="# " transform="rotate(180deg)">
+                <div class="control right">
+                    <div class="arrow right">&#10095</div>
                 </div>
             </div>
         </div>
@@ -145,7 +159,8 @@
                     eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
                     nibh.</h3>
                 <div class="about-us-pbloc">
-                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile1.jpg" width="300" height="300" alt="#" />
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile1.jpg" width="300" height="300"
+                            alt="#" />
                         <h4>Adam Jensen</h4>
                         <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor
                             id lorem.</p>
@@ -154,7 +169,8 @@
                         <a href="#"><span class="icon-twitter"></span></a>
                         <a href="#"><span class="icon-linkedin"></span></a></span></a>
                     </div>
-                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile2.jpg" width="300" height="300" alt="#" />
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile2.jpg" width="300" height="300"
+                            alt="#" />
                         <h4>Desmond Miles</h4>
                         <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
                             ultrices velit.</p>
@@ -163,7 +179,8 @@
                         <a href="#"><span class="icon-twitter"></span></a>
                         <a href="#"><span class="icon-linkedin"></span></a></span></a>
                     </div>
-                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile3.jpg" width="300" height="300" alt="#" />
+                    <div class="about-us-pbloc-inner"><img src="./assets/images/profile3.jpg" width="300" height="300"
+                            alt="#" />
                         <h4>Scolara Visari</h4>
                         <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
                             Quisque condimentum.</p>
@@ -187,13 +204,15 @@
                 </h3>
                 <ul>
                     <li>
-                        <form name="get-a-quote-form" method="GET">
-                            <input name="Name" class type="text" placeholder="Name (Required)" required>
-                            <input name="Email" class type="email" placeholder="Email (Required)" required>
-                            <input name="Subject" class type="text" placeholder="Subject" required>
-                            <textarea name="text-detail" placeholder="Describe your project in detail..."></textarea>
+                        <form id="get-a-quote-form"  onsubmit="showMessagemModal()" >
+                            <input id="Name" maxlength="100" class type="text" placeholder="Name (Required)" required>
+                            <input id="Email" class type="email" placeholder="Email (Required)" required>
+                            <input id="Subject" maxlength="120" class type="text" placeholder="Subject" required>
+                            <textarea id="text-detail" maxlength="255" placeholder="Describe your project in detail..."></textarea>
                             <input type="submit" value="submit" class="subbtn">
+                        </form>
                     </li>
+                    
                     <li>
                         <h4>Contact Information</h4>
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae,
@@ -207,6 +226,15 @@
                         <div class="get-a-quote-contact"><img src="./assets/images/mail.svg" alt="mail" width="13"
                                 height="11"> <a href="mailto:info@singolo.com"> info@singolo.com </a> </div>
                     </li>
+            </div>
+            <div id="resultWindow" class="hidden">
+                <div id="message">
+                    <p><span class="message-title">Письмо отправлено</span></p>
+                    <p><span id="nameValue"></span></p>
+                    <p><span id="subjectValue"></span></p>
+                    <p><span id="describeValue"></span></p>
+                    <input id="okButton" class="message-button" type="button" value="OK"></input>
+                </div>
             </div>
         </div>
     </div>
